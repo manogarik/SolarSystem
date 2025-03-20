@@ -38,6 +38,16 @@ const solarSystem = [
   solarSystem[6].moons[3] = "Oberon";
   console.log(solarSystem[6]);
   // 8. Iterate through the solarSystem array and print only the objects that have a ringSystem (where ringSystem: true), and ignore the others.
+  console.log("Objects that have a ring System");
+  solarSystem.forEach((planet) =>
+  {
+    
+    if(planet.ringSystem === true)
+    {
+        console.log(planet);
+    }
+  }
+  );
   //////////////////////////////
   // The Solar System, Part 2 //
   //////////////////////////////
