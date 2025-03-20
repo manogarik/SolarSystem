@@ -199,18 +199,27 @@ const solarSystem = [
   };
   
   // 1. Console.log the mass of Mercury
-  
+    console.log("Mercury mass : "  +  system.mercury.mass);
   
   // 2. Console.log the eccentricity of Venus
-  
+   console.log(" Venus Eccentricity : " + system.venus.eccentricity);
   
   // 3. Console.log the sum of the number of satellites of Jupiter, Saturn, Uranus, and Neptune (131)
-  
-  
+     const sum = parseInt(system.jupiter.satellites) + parseInt(system.saturn.satellites) + parseInt(system.uranus.satellites) + parseInt(system.neptune.satellites);
+     console.log("Sum of the satellites of Jupiter,Saturn,Uranus and Neptune " + sum);
   // 4. Write a conditional that checks if Mercury's radiusp is a string (remember the typeof command). If Mercury's radiusp is a string, change the value to be the same as its radiuse value. (radiusp is radius at the poles, radiuse is radius at the equator).
-  
+  if(typeof system.mercury.radiusp === 'string')
+  {
+    system.mercury.radiusp = system.mercury.radiuse;
+  }
   
   // 5. Console.log Mercury's radiusp (should be 2439, not 'same').
-  
+  console.log("Mercury Radiusp " + system.mercury.radiusp);
   
   // 6. Find the difference between Jupiter's momentum and Pluto's momentum. (To get momentum, you'll want the product of velocity and mass).
+  const jupmom = parseFloat(system.jupiter.velocity) * parseFloat(system.jupiter.mass);
+  
+  const plutomom = parseFloat(system.pluto.velocity) * parseFloat(system.pluto.mass);
+  
+  
+  console.log(" Difference between Jupiter and Pluto's Momentum " + (jupmom - plutomom));
